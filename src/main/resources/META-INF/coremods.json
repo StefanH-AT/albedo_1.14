@@ -1,0 +1,7 @@
+{
+  "RenderManager": "RenderManager.js",
+  "GlStateManager": "GlStateManager.js",
+  "TileEntityRendererDispatcher": "TileEntityRendererDispatcher.js",
+  "ChunkRenderContainer": "ChunkRenderContainer.js",
+  "Profiler": "Profiler.js"
+}
