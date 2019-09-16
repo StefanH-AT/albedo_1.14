@@ -28,6 +28,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jline.utils.Log;
 
 import javax.annotation.Nullable;
 import java.util.HashMap;
@@ -80,6 +81,9 @@ public class Albedo {
     }
 
     public void clientSetup(FMLClientSetupEvent event) {
+
+        Log.info("Setting up client");
+
         MinecraftForge.EVENT_BUS.register(new EventManager());
         MinecraftForge.EVENT_BUS.register(new ConfigManager());
         registerBlockHandler(Blocks.REDSTONE_TORCH, (pos, state, evt) -> {

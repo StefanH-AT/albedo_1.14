@@ -5,7 +5,7 @@ issueTrackerURL="https://rr-dev.atlassian.net/servicedesk/customer/portal/3"
 modId="albedo"
 version="${file.jarVersion}"
 displayName="Albedo"
-credits=""
+credits="Tewan (1.14 Port)"
 authors="Horizon Studio, Elucent"
 description='''
 
