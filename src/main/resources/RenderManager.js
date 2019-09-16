@@ -3,7 +3,7 @@ function initializeCoreMod() {
         'coremodone': {
             'target': {
                 'type': 'CLASS',
-                'name': 'net.minecraft.client.renderer.entity.RenderManager'
+                'name': 'net.minecraft.client.renderer.entity.EntityRendererManager'
             },
             'transformer': function(classNode) {
                 print("Cheese ", classNode.toString());

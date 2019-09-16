@@ -3,7 +3,7 @@ function initializeCoreMod() {
         'coremodone': {
             'target': {
                 'type': 'CLASS',
-                'name': 'net.minecraft.client.renderer.GlStateManager'
+                'name': 'com.mojang.blaze3d.platform.GlStateManager'
             },
             'transformer': function(classNode) {
                 var opcodes = Java.type('org.objectweb.asm.Opcodes')

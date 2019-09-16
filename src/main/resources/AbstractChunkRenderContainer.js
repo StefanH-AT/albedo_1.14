@@ -3,7 +3,7 @@ function initializeCoreMod() {
         'coremodone': {
             'target': {
                 'type': 'CLASS',
-                'name': 'net.minecraft.client.renderer.ChunkRenderContainer'
+                'name': 'net.minecraft.client.renderer.AbstractChunkRenderContainer'
             },
             'transformer': function(classNode) {
                 var opcodes = Java.type('org.objectweb.asm.Opcodes')
@@ -24,7 +24,7 @@ function initializeCoreMod() {
                             var instruction = instr[t];
                             if(instruction.getOpcode() == opcodes.RETURN) {
                                 code.insertBefore(instruction, new VarInsnNode(opcodes.ALOAD, 1))
-                                code.insertBefore(instruction, new MethodInsnNode(opcodes.INVOKESTATIC, "com/hrznstudio/albedo/util/RenderUtil", "renderChunkUniforms", "(Lnet/minecraft/client/renderer/chunk/RenderChunk;)V", false))
+                                code.insertBefore(instruction, new MethodInsnNode(opcodes.INVOKESTATIC, "com/hrznstudio/albedo/util/RenderUtil", "renderChunkUniforms", "(Lnet/minecraft/client/renderer/chunk/ChunkRender;)V", false))
                                 break;
                             }
                         }
